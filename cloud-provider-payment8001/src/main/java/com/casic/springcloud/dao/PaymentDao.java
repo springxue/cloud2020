@@ -1,6 +1,6 @@
 package com.casic.springcloud.dao;
 
-import com.casic.springcloud.entities.Payment;
+import entities.Payment;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 

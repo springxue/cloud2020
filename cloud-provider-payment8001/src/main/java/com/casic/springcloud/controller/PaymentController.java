@@ -1,8 +1,9 @@
 package com.casic.springcloud.controller;
 
-import com.casic.springcloud.entities.CommonResult;
-import com.casic.springcloud.entities.Payment;
+
 import com.casic.springcloud.service.PaymentService;
+import entities.CommonResult;
+import entities.Payment;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -14,7 +15,7 @@ public class PaymentController {
     PaymentService paymentService;
 
     @PostMapping("/payment/create")
-    public CommonResult create(Payment payment){
+    public CommonResult create(@RequestBody Payment payment){
         int result=paymentService.create(payment);
         log.info("*******插入结果："+result);
         if(result>0){
